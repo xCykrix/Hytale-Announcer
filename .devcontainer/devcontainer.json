@@ -1,0 +1,49 @@
+{
+    "name": "java-gradle",
+    "image": "mcr.microsoft.com/devcontainers/java:25-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "25",
+            "jdkDistro": "tem",
+            "installMaven": "true",
+            "installGradle": "true",
+            "gradleVersion": "9.1.0"
+        }
+    },
+    "customizations": {
+        "settings": {
+            "remote.containers.copyGitConfig": true
+        },
+        "vscode": {
+            "settings": {
+                "java.configuration.updateBuildConfiguration": "automatic",
+                "editor.formatOnSave": true,
+                "fileNestingUpdater.autoUpdate": true,
+                "fileNestingUpdater.autoUpdateInterval": 720,
+                "fileNestingUpdater.promptOnAutoUpdate": false,
+                "fileNestingUpdater.upstreamRepo": "antfu/vscode-file-nesting-config",
+                "fileNestingUpdater.upstreamBranch": "main"
+            }
+        },
+        "extensions": [
+            // Editor
+            "editorconfig.editorconfig",
+            // Utilities
+            "aaron-bond.better-comments",
+            "ms-azuretools.vscode-containers",
+            "christian-kohler.path-intellisense",
+            "antfu.file-nesting",
+            // IntelliCode
+            "VisualStudioExptTeam.vscodeintellicode",
+            "VisualStudioExptTeam.vscodeintellicode-insiders",
+            "VisualStudioExptTeam.vscodeintellicode-completions",
+            "VisualStudioExptTeam.intellicode-api-usage-examples",
+            "ms-vsliveshare.vsliveshare"
+        ]
+    },
+    "remoteUser": "root",
+    "containerUser": "root",
+    "postCreateCommand": {
+        "safe": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+    },
+}

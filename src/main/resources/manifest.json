@@ -1,0 +1,19 @@
+{
+    "Group": "github.example",
+    "Name": "ExamplePlugin",
+    "Main": "github.example.ExamplePlugin",
+    "Version": "1.0.0",
+    "Description": "Description of your plugin",
+    "Authors": [
+        {
+            "Name": "Your Name",
+            "Email": "your.email@example.com",
+            "Url": "https://your-website.com"
+        }
+    ],
+    "Website": "https://your-plugin-website.com",
+    "ServerVersion": "*",
+    "Dependencies": {},
+    "OptionalDependencies": {},
+    "DisabledByDefault": false
+}
