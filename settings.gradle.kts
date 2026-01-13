@@ -1,1 +1,1 @@
-rootProject.name = "SDKTest"
+rootProject.name = "ExamplePlugin"
