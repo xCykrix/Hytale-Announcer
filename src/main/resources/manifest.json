@@ -1,7 +1,7 @@
 {
-    "Group": "github.example",
-    "Name": "ExamplePlugin",
-    "Main": "github.example.ExamplePlugin",
+    "Group": "github.xCykrix",
+    "Name": "Announcer",
+    "Main": "github.xCykrix.announcer.Announcer",
     "Version": "1.0.0",
     "Description": "Description of your plugin",
     "Authors": [
