@@ -1,19 +1,15 @@
 {
     "Group": "github.xCykrix",
     "Name": "Announcer",
-    "Main": "github.xCykrix.announcer.Announcer",
-    "Version": "1.0.0",
-    "Description": "Description of your plugin",
+    "Version": "1.1.0",
+    "Description": "Advanced Hytale Announcement Mod - (Color Support) Titles, Broadcasts, Join/Leave Messages, Messages of the Day, and more! Day 1 Release.",
     "Authors": [
         {
-            "Name": "Your Name",
-            "Email": "your.email@example.com",
-            "Url": "https://your-website.com"
+            "Name": "xCykrix",
+            "Email": "sammyvoeller@gmail.com"
         }
     ],
-    "Website": "https://your-plugin-website.com",
+    "Website": "https://github.com/xCykrix/Hytale-Announcer",
     "ServerVersion": "*",
-    "Dependencies": {},
-    "OptionalDependencies": {},
-    "DisabledByDefault": false
+    "Main": "github.xCykrix.announcer.Announcer"
 }

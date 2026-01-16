@@ -1,5 +1,8 @@
 package github.xCykrix.announcer;
 
+import java.time.LocalDateTime;
+import java.util.logging.Level;
+
 import javax.annotation.Nonnull;
 
 import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
@@ -13,18 +16,26 @@ import github.xCykrix.announcer.config.AnnouncerConfig;
 import github.xCykrix.announcer.event.GreetingPlayerReadyEvent;
 
 public class Announcer extends JavaPlugin {
+    public static final LocalDateTime PLUGIN_START_TIME = LocalDateTime.now();
     private final Config<AnnouncerConfig> CONFIG_WITH_CODEC = withConfig(AnnouncerConfig.CODEC);
     private AnnouncerConfig config;
 
     public Announcer(@Nonnull JavaPluginInit init) {
         super(init);
-        this.getDataDirectory();
     }
 
     @Override
     protected void setup() {
-        this.config = this.CONFIG_WITH_CODEC.get();
-        this.CONFIG_WITH_CODEC.save();
+        try {
+            this.config = this.CONFIG_WITH_CODEC.get();
+            this.CONFIG_WITH_CODEC.save();
+        } catch (Exception e) {
+            this.getLogger().at(Level.SEVERE).log(
+                    "Failed to load github.xCykrix_Announcer configuration file! It may be outdated, invalid, or corrupt.",
+                    e);
+            this.shutdown();
+            return;
+        }
 
         // Register Commands
         this.getCommandRegistry()
