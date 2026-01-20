@@ -50,6 +50,12 @@ public class WorldRegionalInfo implements PlaceholderProvider<PlayerRef> {
                     Map.entry("world_current_biome", "Unknown"));
         }
         ZoneDiscoveryInfo currentZone = worldMapTracker.getCurrentZone();
+        if (currentZone == null) {
+            return Map.ofEntries(
+                    Map.entry("world_current_zone", "Unknown"),
+                    Map.entry("world_current_region", "Unknown"),
+                    Map.entry("world_current_biome", "Unknown"));
+        }
 
         return Map.ofEntries(
                 Map.entry("world_current_zone", currentZone.zoneName()),
