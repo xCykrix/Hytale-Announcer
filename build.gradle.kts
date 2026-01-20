@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "github.xCykrix"
-version = "1.1.0"
+version = "1.1.1"
 val description = "Advanced Hytale Announcement Mod - (Color Support) Titles, Broadcasts, Join/Leave Messages, Messages of the Day, and more! Day 1 Release."
 
 repositories {
